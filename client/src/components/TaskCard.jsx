@@ -10,7 +10,7 @@ const TaskCard = ({ task, fetchTasks }) => {
     // Handle task status update
     const handleStatusChange = async (newStatus) => {
         try {
-            await axios.put(`http://localhost:5000/api/tasks/${task.id}`, { status: newStatus });
+            await axios.put(`https://server-gre-vercel.vercel.app/api/tasks/${task.id}`, { status: newStatus });
             setStatus(newStatus); // Update the status in UI
             fetchTasks(); // Refresh tasks after updating
         } catch (error) {
@@ -21,7 +21,7 @@ const TaskCard = ({ task, fetchTasks }) => {
     // Handle task deletion
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/tasks/${task.id}`);
+            await axios.delete(`https://server-gre-vercel.vercel.app/api/tasks/${task.id}`);
             fetchTasks(); // Refresh tasks after deletion
         } catch (error) {
             console.error('Error deleting task:', error);

@@ -15,7 +15,7 @@ const AddTask = ({ onClose }) => {
     // Fetch all team members (to be displayed in the dropdown)
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/users');
+            const response = await axios.get('https://server-gre-vercel.vercel.app/api/users');
             setUsers(response.data); // Store the users in state
         } catch (error) {
             console.error('Error fetching users:', error);
@@ -35,7 +35,7 @@ const AddTask = ({ onClose }) => {
         }
         try {
             // Send task data to the backend
-            await axios.post('http://localhost:5000/api/tasks', { 
+            await axios.post('https://server-gre-vercel.vercel.app/api/tasks', { 
                 title, 
                 description, 
                 status, 
