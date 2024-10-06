@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
         setError(''); // Reset error message
         try {
-            const response = await axios.post('http://localhost:5000/api/users/login', { email, password } , );
+            const response = await axios.post('https://server-gre-vercel.vercel.app/api/users/login', { email, password } , );
             setUser({ ...response.data.user, token: response.data.token }); // Set user data in context
             navigate('/'); // Redirect to dashboard
         } catch (error) {

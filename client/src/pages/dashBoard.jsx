@@ -12,7 +12,7 @@ const DashBoard = () => {
     // Fetch tasks from the backend
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/tasks');
+            const response = await axios.get('https://server-gre-vercel.vercel.app/api/tasks');
             if (Array.isArray(response.data)) {
                 setTasks(response.data);
             } else {

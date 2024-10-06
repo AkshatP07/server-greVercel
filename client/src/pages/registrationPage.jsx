@@ -52,7 +52,7 @@ const Registration = () => {
         const registrationData = { name, email, password, dob, role };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/users', registrationData , { withCredentials: true }); // Updated endpoint
+            const response = await axios.post('https://server-gre-vercel.vercel.app/api/users', registrationData , { withCredentials: true }); // Updated endpoint
             console.log('Registration successful:', response.data);
             alert('Registration successful!'); // Success message
             // Reset form fields

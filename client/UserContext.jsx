@@ -19,7 +19,7 @@ export default function UserContextProvider({ children }) {
                 console.log('Hello user');
                 try {
                     console.log("Fetching user profile...");
-                    const response = await axios.get('http://localhost:5000/api/users/me', { 
+                    const response = await axios.get('https://server-gre-vercel.vercel.app/api/users/me', { 
                         withCredentials: true, 
                         headers: { Authorization: `Bearer ${token}` } 
                     }); 
