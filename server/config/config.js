@@ -1,9 +1,11 @@
+const pg = require('pg');
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
     dialect: 'postgres',
     logging: false, // To disable SQL logging, helps during development
+    dialectModule: pg,
     dialectOptions: {
         ssl: {
             require: true,
