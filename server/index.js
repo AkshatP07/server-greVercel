@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173'
+    origin: 'https://client-gre-vercel-qokg.vercel.app'
 }));
 app.use(bodyParser.json());
 
